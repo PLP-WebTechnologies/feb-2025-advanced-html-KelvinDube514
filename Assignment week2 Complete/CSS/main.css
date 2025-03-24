@@ -1,0 +1,1158 @@
+/*
+    Theme: Level Up Emporium Video Game Store
+    Author: Your Name (or leave blank)
+    Date: March 24, 2025
+    Description: Main stylesheet for the Level Up Emporium website.
+*/
+
+/* Global Reset and Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #181818; /* Dark background for a gaming feel */
+    color: #f0f0f0; /* Light text color */
+    line-height: 1.6;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Typography */
+h1, h2 {
+    color: #e67e22; /* Orange accent color */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #222; /* Darker container background */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+
+section > h2 {
+    text-align: left;
+    margin-top: 0;
+    border-bottom: 2px solid #e67e22;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Featured Categories */
+#featured-categories ol {
+    list-style-type: upper-roman;
+    padding-left: 25px;
+}
+
+#featured-categories li {
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+/* Showcase Image */
+#showcase-image {
+    text-align: center;
+}
+
+#showcase-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+
+#showcase-image .caption {
+    font-style: italic;
+    color: #999;
+}
+
+/* Contact Us Table */
+#contact-us table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+#contact-us th,
+#contact-us td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#contact-us th {
+    background-color: #4a90e2;
+    color: white;
+}
+
+#contact-us tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Registration Form */
+#registration form {
+    display: grid;
+    grid-gap: 15px;
+}
+
+#registration div {
+    display: flex;
+    flex-direction: column;
+}
+
+#registration label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+#registration input[type="text"],
+#registration input[type="email"],
+#registration input[type="password"],
+#registration input[type="date"],
+#registration select {
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+    font-size: 1em;
+}
+
+#registration input::placeholder {
+    color: #999;
+}
+
+#registration input[type="radio"],
+#registration input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+#registration p {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+#registration button[type="submit"] {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#registration button[type="submit"]:hover {
+    background-color: #d35400;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #181818;
+    color: #999;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Featured Games Section */
+#featured-games {
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.game-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.game-card h3 {
+    margin: 1rem 0;
+    color: #333;
+}
+
+.game-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0.5rem 0;
+}
+
+.game-card .description {
+    color: #666;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.game-card .buy-now {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.game-card .buy-now:hover {
+    background-color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .game-card {
+        margin: 0 1rem;
+    }
+}
+
+/* Controllers Showcase Section */
+#controllers-showcase {
+    padding: 2rem;
+    background-color: #1a1a1a;
+}
+
+.controllers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.controller-card {
+    background: #2a2a2a;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #3a3a3a;
+}
+
+.controller-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    border-color: #e67e22;
+}
+
+.controller-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background-color: #333;
+    padding: 1rem;
+}
+
+.controller-card h3 {
+    color: #e67e22;
+    margin: 1rem 0;
+    font-size: 1.3rem;
+}
+
+.controller-card .price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2ecc71;
+    margin: 0.5rem 0;
+}
+
+.controller-card .description {
+    color: #ccc;
+    margin: 0.8rem 0;
+    line-height: 1.5;
+}
+
+.controller-card .features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.controller-card .features li {
+    color: #bbb;
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.controller-card .features li::before {
+    content: "•";
+    color: #e67e22;
+    position: absolute;
+    left: 0;
+}
+
+.controller-card .buy-now {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.controller-card .buy-now:hover {
+    background-color: #d35400;
+}
+
+/* Responsive Design for Controllers */
+@media (max-width: 768px) {
+    .controllers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .controller-card {
+        margin: 0 1rem;
+    }
+    
+    .controller-card img {
+        height: 180px;
+    }
+}
+
+/* Gaming Accessories Section */
+#gaming-accessories {
+    padding: 2rem;
+    background-color: #2c3e50;
+}
+
+.accessories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.accessory-card {
+    background: #34495e;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #3498db;
+}
+
+.accessory-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    border-color: #2980b9;
+}
+
+.accessory-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background-color: #2c3e50;
+    padding: 1rem;
+}
+
+.accessory-card h3 {
+    color: #3498db;
+    margin: 1rem 0;
+    font-size: 1.3rem;
+}
+
+.accessory-card .price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2ecc71;
+    margin: 0.5rem 0;
+}
+
+.accessory-card .description {
+    color: #ecf0f1;
+    margin: 0.8rem 0;
+    line-height: 1.5;
+}
+
+.accessory-card .features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.accessory-card .features li {
+    color: #bdc3c7;
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.accessory-card .features li::before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+}
+
+.accessory-card .buy-now {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.accessory-card .buy-now:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design for Accessories */
+@media (max-width: 768px) {
+    .accessories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .accessory-card {
+        margin: 0 1rem;
+    }
+    
+    .accessory-card img {
+        height: 180px;
+    }
+}
+
+/* Community Section */
+#community {
+    padding: 2rem;
+    background-color: #1a1a1a;
+}
+
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.community-card {
+    background: #2a2a2a;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.community-card h3 {
+    color: #e67e22;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* Events Section */
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.event-item {
+    background: #333;
+    border-radius: 10px;
+    padding: 1.2rem;
+    border: 1px solid #444;
+    transition: transform 0.3s ease;
+}
+
+.event-item:hover {
+    transform: translateY(-3px);
+    border-color: #e67e22;
+}
+
+.event-item h4 {
+    color: #e67e22;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+}
+
+.event-item .date {
+    color: #3498db;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.event-item .details {
+    color: #ccc;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.event-features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.event-features li {
+    color: #bbb;
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.event-features li::before {
+    content: "•";
+    color: #e67e22;
+    position: absolute;
+    left: 0;
+}
+
+.register-btn {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.register-btn:hover {
+    background-color: #d35400;
+}
+
+/* Social Features Section */
+.social-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.social-item {
+    background: #333;
+    border-radius: 10px;
+    padding: 1.2rem;
+    border: 1px solid #444;
+    transition: transform 0.3s ease;
+}
+
+.social-item:hover {
+    transform: translateY(-3px);
+    border-color: #3498db;
+}
+
+.social-item h4 {
+    color: #3498db;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+}
+
+.social-item p {
+    color: #ccc;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.social-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.social-features-list li {
+    color: #bbb;
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.social-features-list li::before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+}
+
+.join-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.join-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design for Community */
+@media (max-width: 768px) {
+    .community-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .community-card {
+        margin: 0 1rem;
+    }
+    
+    .event-item,
+    .social-item {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Tokyo Community Section */
+#tokyo-community {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#tokyo-community::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #e67e22, #3498db, #e67e22);
+    background-size: 200% 100%;
+    animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 0%; }
+}
+
+#tokyo-community h2 {
+    color: #e67e22;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+#tokyo-community h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #e67e22;
+    border-radius: 2px;
+}
+
+.tokyo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.tokyo-card {
+    background: rgba(42, 42, 42, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.tokyo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(230, 126, 34, 0.2);
+}
+
+.tokyo-card h3 {
+    color: #e67e22;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.tokyo-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #e67e22, #3498db);
+    border-radius: 2px;
+}
+
+.tokyo-card .event-item,
+.tokyo-card .social-item {
+    background: rgba(51, 51, 51, 0.8);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(230, 126, 34, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tokyo-card .event-item::before,
+.tokyo-card .social-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(230, 126, 34, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.tokyo-card .event-item:hover::before,
+.tokyo-card .social-item:hover::before {
+    transform: translateX(100%);
+}
+
+.tokyo-card .event-item:hover,
+.tokyo-card .social-item:hover {
+    transform: translateY(-5px);
+    border-color: #e67e22;
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.2);
+}
+
+.tokyo-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.tokyo-card .event-item:hover img {
+    transform: scale(1.02);
+}
+
+.tokyo-card video {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.tokyo-card h4 {
+    color: #e67e22;
+    margin: 0 0 0.8rem 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.tokyo-card .date {
+    color: #3498db;
+    font-weight: bold;
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.tokyo-card .date::before {
+    content: '📅';
+    margin-right: 8px;
+}
+
+.tokyo-card .details {
+    color: #ddd;
+    margin: 0.8rem 0;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.tokyo-card .event-features,
+.tokyo-card .social-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.2rem 0;
+}
+
+.tokyo-card .event-features li,
+.tokyo-card .social-features-list li {
+    color: #bbb;
+    margin: 0.8rem 0;
+    padding-left: 1.8rem;
+    position: relative;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+}
+
+.tokyo-card .event-features li::before,
+.tokyo-card .social-features-list li::before {
+    content: "→";
+    color: #e67e22;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.tokyo-card .register-btn,
+.tokyo-card .join-btn {
+    background: linear-gradient(45deg, #e67e22, #d35400);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tokyo-card .register-btn::before,
+.tokyo-card .join-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.tokyo-card .register-btn:hover::before,
+.tokyo-card .join-btn:hover::before {
+    left: 100%;
+}
+
+.tokyo-card .register-btn:hover,
+.tokyo-card .join-btn:hover {
+    background: linear-gradient(45deg, #d35400, #e67e22);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+}
+
+/* Responsive Design for Tokyo Community */
+@media (max-width: 768px) {
+    #tokyo-community {
+        padding: 3rem 1rem;
+    }
+
+    #tokyo-community h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .tokyo-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .tokyo-card {
+        margin: 0 0.5rem;
+        padding: 1.5rem;
+    }
+    
+    .tokyo-card img,
+    .tokyo-card video {
+        height: 200px;
+    }
+
+    .tokyo-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .tokyo-card h4 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Staff Profiles Section */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.staff-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+}
+
+.staff-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #4a90e2;
+}
+
+.staff-card h3 {
+    color: #333;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.staff-card .role {
+    color: #4a90e2;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.staff-card .bio {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Podcast Section Styles */
+#gaming-podcast {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.podcast-container {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.podcast-episode {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.podcast-episode:hover {
+    transform: translateY(-5px);
+}
+
+.podcast-content h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.podcast-content .date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.podcast-content .description {
+    color: #34495e;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.podcast-player {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.podcast-player audio {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.podcast-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.podcast-platform {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.podcast-platform:hover {
+    background-color: #e0e0e0;
+}
+
+.podcast-platform i {
+    font-size: 1.2rem;
+}
+
+.podcast-subscription {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.podcast-subscription h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.podcast-subscription p {
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+}
+
+.subscription-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.subscribe-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #2980b9;
+}
+
+.subscribe-btn i {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .podcast-container {
+        padding: 0 1rem;
+    }
+    
+    .podcast-episode {
+        padding: 1rem;
+    }
+}
